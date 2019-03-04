@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema id="1">
+    <version>generic schema v.0</version>
+    <name>MD1</name>
+    <components>
+        <fact id="2">
+            <name>ActiviteJournaliste_MD</name>
+            <attributes>
+                <measure id="3">
+                    <name>Montant_MD</name>
+                    <datatype>0</datatype>
+                    <type>measure</type>
+                </measure>
+                <measure id="4">
+                    <name>Nombre_MD</name>
+                    <datatype>0</datatype>
+                    <type>measure</type>
+                </measure>
+            </attributes>
+        </fact>
+        <dimension id="5">
+            <name>Publication_MD</name>
+            <attributes>
+                <parameter id="11">
+                    <name>CodePU</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="46">
+                            <name>NomPU</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                        <weakattribute id="47">
+                            <name>DateCreat</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                        <weakattribute id="48">
+                            <name>DateFin</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+                <parameter id="12">
+                    <name>CodeTypePU</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="45">
+                            <name>NomTypePU</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+                <parameter id="19">
+                    <name>GroupePresse</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes/>
+                </parameter>
+                <parameter id="24">
+                    <name>Periodicite</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes/>
+                </parameter>
+                <parameter id="29">
+                    <name>CodeJ</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="49">
+                            <name>NomJ</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                        <weakattribute id="50">
+                            <name>PrenomJ</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                        <weakattribute id="51">
+                            <name>DateObtenu</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+                <parameter id="32">
+                    <name>CodeDip</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="52">
+                            <name>NomDip</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+                <parameter id="42">
+                    <name>CodeInstitutFormation</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="54">
+                            <name>NomInstitutFormation</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+                <parameter id="39">
+                    <name>CodeTypeJ</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="55">
+                            <name>NomTypeJ</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                        <weakattribute id="56">
+                            <name>PrixCar</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+            </attributes>
+            <hierarchies>
+                <hierarchy id="13">
+                    <name>H_typeP</name>
+                    <type>strict</type>
+                    <levels>
+                        <level id="14">
+                            <parameter_id>11</parameter_id>
+                            <levelPosition>1</levelPosition>
+                        </level>
+                        <level id="15">
+                            <parameter_id>12</parameter_id>
+                            <levelPosition>2</levelPosition>
+                            <link id="16">
+<name>H_typeP</name>
+<lower_param_id>11</lower_param_id>
+<upper_param_id>12</upper_param_id>
+<levelposition>2</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                    </levels>
+                </hierarchy>
+                <hierarchy id="17">
+                    <name>H_Gp</name>
+                    <type>strict</type>
+                    <levels>
+                        <level id="18">
+                            <parameter_id>11</parameter_id>
+                            <levelPosition>1</levelPosition>
+                        </level>
+                        <level id="20">
+                            <parameter_id>19</parameter_id>
+                            <levelPosition>2</levelPosition>
+                            <link id="21">
+<name>H_Gp</name>
+<lower_param_id>11</lower_param_id>
+<upper_param_id>19</upper_param_id>
+<levelposition>2</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                    </levels>
+                </hierarchy>
+                <hierarchy id="22">
+                    <name>H_Pe</name>
+                    <type>strict</type>
+                    <levels>
+                        <level id="23">
+                            <parameter_id>11</parameter_id>
+                            <levelPosition>1</levelPosition>
+                        </level>
+                        <level id="25">
+                            <parameter_id>24</parameter_id>
+                            <levelPosition>2</levelPosition>
+                            <link id="26">
+<name>H_Pe</name>
+<lower_param_id>11</lower_param_id>
+<upper_param_id>24</upper_param_id>
+<levelposition>2</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                    </levels>
+                </hierarchy>
+                <hierarchy id="27">
+                    <name>H_dip</name>
+                    <type>strict</type>
+                    <levels>
+                        <level id="28">
+                            <parameter_id>11</parameter_id>
+                            <levelPosition>1</levelPosition>
+                        </level>
+                        <level id="30">
+                            <parameter_id>29</parameter_id>
+                            <levelPosition>2</levelPosition>
+                            <link id="31">
+<name></name>
+<lower_param_id>11</lower_param_id>
+<upper_param_id>29</upper_param_id>
+<levelposition>2</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                        <level id="33">
+                            <parameter_id>32</parameter_id>
+                            <levelPosition>3</levelPosition>
+                            <link id="34">
+<name>H_dip</name>
+<lower_param_id>29</lower_param_id>
+<upper_param_id>32</upper_param_id>
+<levelposition>3</levelposition>
+<type>strict incomplete</type>
+                            </link>
+                        </level>
+                        <level id="43">
+                            <parameter_id>42</parameter_id>
+                            <levelPosition>4</levelPosition>
+                            <link id="44">
+<name></name>
+<lower_param_id>32</lower_param_id>
+<upper_param_id>42</upper_param_id>
+<levelposition>4</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                    </levels>
+                </hierarchy>
+                <hierarchy id="35">
+                    <name>H_typeJ</name>
+                    <type>strict</type>
+                    <levels>
+                        <level id="36">
+                            <parameter_id>11</parameter_id>
+                            <levelPosition>1</levelPosition>
+                        </level>
+                        <level id="37">
+                            <parameter_id>29</parameter_id>
+                            <levelPosition>2</levelPosition>
+                            <link id="38">
+<lower_param_id>11</lower_param_id>
+<upper_param_id>29</upper_param_id>
+<levelposition>2</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                        <level id="40">
+                            <parameter_id>39</parameter_id>
+                            <levelPosition>3</levelPosition>
+                            <link id="41">
+<name>H_typeJ</name>
+<lower_param_id>29</lower_param_id>
+<upper_param_id>39</upper_param_id>
+<levelposition>3</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                    </levels>
+                </hierarchy>
+            </hierarchies>
+        </dimension>
+        <dimension id="6">
+            <name>Journaliste_MD</name>
+            <attributes>
+                <parameter id="57">
+                    <name>CodeJ</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="77">
+                            <name>NomJ</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                        <weakattribute id="78">
+                            <name>PrenomJ</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                        <weakattribute id="79">
+                            <name>DateObtenu</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+                <parameter id="58">
+                    <name>CodeDip</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="80">
+                            <name>NomDip</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+                <parameter id="68">
+                    <name>CodeInstitutFormation</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="81">
+                            <name>NomInstitutFormation</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+                <parameter id="74">
+                    <name>CodeTypeJ</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="82">
+                            <name>NomTypeJ</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                        <weakattribute id="83">
+                            <name>PrixCar</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+            </attributes>
+            <hierarchies>
+                <hierarchy id="59">
+                    <name>H_dip</name>
+                    <type>strict</type>
+                    <levels>
+                        <level id="60">
+                            <parameter_id>57</parameter_id>
+                            <levelPosition>1</levelPosition>
+                        </level>
+                        <level id="61">
+                            <parameter_id>58</parameter_id>
+                            <levelPosition>2</levelPosition>
+                            <link id="62">
+<name>H_dip</name>
+<lower_param_id>57</lower_param_id>
+<upper_param_id>58</upper_param_id>
+<levelposition>2</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                        <level id="69">
+                            <parameter_id>68</parameter_id>
+                            <levelPosition>3</levelPosition>
+                            <link id="70">
+<name></name>
+<lower_param_id>58</lower_param_id>
+<upper_param_id>68</upper_param_id>
+<levelposition>3</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                    </levels>
+                </hierarchy>
+                <hierarchy id="72">
+                    <name>H_typeJ</name>
+                    <type>strict</type>
+                    <levels>
+                        <level id="73">
+                            <parameter_id>57</parameter_id>
+                            <levelPosition>1</levelPosition>
+                        </level>
+                        <level id="75">
+                            <parameter_id>74</parameter_id>
+                            <levelPosition>2</levelPosition>
+                            <link id="76">
+<name>H_typeJ</name>
+<lower_param_id>57</lower_param_id>
+<upper_param_id>74</upper_param_id>
+<levelposition>2</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                    </levels>
+                </hierarchy>
+            </hierarchies>
+        </dimension>
+        <dimension id="7">
+            <name>Temps_MD</name>
+            <attributes>
+                <parameter id="84">
+                    <name>Mois</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes/>
+                </parameter>
+                <parameter id="85">
+                    <name>Annee</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes/>
+                </parameter>
+            </attributes>
+            <hierarchies>
+                <hierarchy id="86">
+                    <name>H_t</name>
+                    <type>strict</type>
+                    <levels>
+                        <level id="87">
+                            <parameter_id>84</parameter_id>
+                            <levelPosition>1</levelPosition>
+                        </level>
+                        <level id="88">
+                            <parameter_id>85</parameter_id>
+                            <levelPosition>2</levelPosition>
+                            <link id="89">
+<name>H_t</name>
+<lower_param_id>84</lower_param_id>
+<upper_param_id>85</upper_param_id>
+<levelposition>2</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                    </levels>
+                </hierarchy>
+            </hierarchies>
+        </dimension>
+    </components>
+    <links>
+        <starlink id="8">
+            <name>ActiviteJournaliste_MD-Publication_MD</name>
+            <fact_id>2</fact_id>
+            <dimension_id>5</dimension_id>
+        </starlink>
+        <starlink id="9">
+            <name>ActiviteJournaliste_MD-Journaliste_MD</name>
+            <fact_id>2</fact_id>
+            <dimension_id>6</dimension_id>
+        </starlink>
+        <starlink id="10">
+            <name>ActiviteJournaliste_MD-Temps_MD</name>
+            <fact_id>2</fact_id>
+            <dimension_id>7</dimension_id>
+        </starlink>
+    </links>
+</schema>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema id="72">
+    <version>generic schema v.0</version>
+    <name>RGP</name>
+    <components>
+        <fact id="73">
+            <name>Distribution_MD</name>
+            <attributes>
+                <measure id="15">
+                    <name>Quantité_MD</name>
+                    <datatype>0</datatype>
+                    <type>measure</type>
+                </measure>
+            </attributes>
+        </fact>
+        <dimension id="75">
+            <name>Client_MD</name>
+            <attributes>
+                <parameter id="9">
+                    <name>CodeC</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="16">
+                            <name>NomC</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                        <weakattribute id="17">
+                            <name>PrenomC</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+                <parameter id="10">
+                    <name>IdVille</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="18">
+                            <name>NomVille</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+                <parameter id="73">
+                    <name>IdCentreDistributeur</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="76">
+                            <name>NomCentreDistributeur</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+                <parameter id="77">
+                    <name>VilleCentreDistributeur</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes/>
+                </parameter>
+                <parameter id="80">
+                    <name>IdPays</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="83">
+                            <name>NomPays</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+            </attributes>
+            <hierarchies>
+                <hierarchy id="11">
+                    <name>H_c</name>
+                    <type>strict</type>
+                    <levels>
+                        <level id="12">
+                            <parameter_id>9</parameter_id>
+                            <levelPosition>1</levelPosition>
+                        </level>
+                        <level id="13">
+                            <parameter_id>10</parameter_id>
+                            <levelPosition>2</levelPosition>
+                            <link id="14">
+<name>H_c</name>
+<lower_param_id>9</lower_param_id>
+<upper_param_id>10</upper_param_id>
+<levelposition>2</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                        <level id="74">
+                            <parameter_id>73</parameter_id>
+                            <levelPosition>3</levelPosition>
+                            <link id="75">
+<name></name>
+<lower_param_id>10</lower_param_id>
+<upper_param_id>73</upper_param_id>
+<levelposition>3</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                        <level id="78">
+                            <parameter_id>77</parameter_id>
+                            <levelPosition>4</levelPosition>
+                            <link id="79">
+<name></name>
+<lower_param_id>73</lower_param_id>
+<upper_param_id>77</upper_param_id>
+<levelposition>4</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                        <level id="81">
+                            <parameter_id>80</parameter_id>
+                            <levelPosition>5</levelPosition>
+                            <link id="82">
+<name></name>
+<lower_param_id>77</lower_param_id>
+<upper_param_id>80</upper_param_id>
+<levelposition>5</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                    </levels>
+                </hierarchy>
+            </hierarchies>
+        </dimension>
+        <dimension id="76">
+            <name>Publication_MD</name>
+            <attributes>
+                <parameter id="40">
+                    <name>CodePU</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="41">
+                            <name>NomPU</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                        <weakattribute id="42">
+                            <name>DateCreat</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                        <weakattribute id="43">
+                            <name>DateFin</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+                <parameter id="46">
+                    <name>CodeTypePU</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes>
+                        <weakattribute id="51">
+                            <name>NomTypePU</name>
+                            <datatype>0</datatype>
+                            <type>weakattribute</type>
+                        </weakattribute>
+                    </weakattributes>
+                </parameter>
+                <parameter id="86">
+                    <name>GroupePresse</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes/>
+                </parameter>
+                <parameter id="91">
+                    <name>Periodicite</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes/>
+                </parameter>
+            </attributes>
+            <hierarchies>
+                <hierarchy id="47">
+                    <name>H_type</name>
+                    <type>strict</type>
+                    <levels>
+                        <level id="48">
+                            <parameter_id>40</parameter_id>
+                            <levelPosition>1</levelPosition>
+                        </level>
+                        <level id="49">
+                            <parameter_id>46</parameter_id>
+                            <levelPosition>2</levelPosition>
+                            <link id="50">
+<name>H_type</name>
+<lower_param_id>40</lower_param_id>
+<upper_param_id>46</upper_param_id>
+<levelposition>2</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                    </levels>
+                </hierarchy>
+                <hierarchy id="84">
+                    <name>H_Gp</name>
+                    <type>strict</type>
+                    <levels>
+                        <level id="85">
+                            <parameter_id>40</parameter_id>
+                            <levelPosition>1</levelPosition>
+                        </level>
+                        <level id="87">
+                            <parameter_id>86</parameter_id>
+                            <levelPosition>2</levelPosition>
+                            <link id="88">
+<name>H_Gp</name>
+<lower_param_id>40</lower_param_id>
+<upper_param_id>86</upper_param_id>
+<levelposition>2</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                    </levels>
+                </hierarchy>
+                <hierarchy id="89">
+                    <name>H_Pe</name>
+                    <type>strict</type>
+                    <levels>
+                        <level id="90">
+                            <parameter_id>40</parameter_id>
+                            <levelPosition>1</levelPosition>
+                        </level>
+                        <level id="92">
+                            <parameter_id>91</parameter_id>
+                            <levelPosition>2</levelPosition>
+                            <link id="93">
+<name>H_Pe</name>
+<lower_param_id>40</lower_param_id>
+<upper_param_id>91</upper_param_id>
+<levelposition>2</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                    </levels>
+                </hierarchy>
+            </hierarchies>
+        </dimension>
+        <dimension id="77">
+            <name>Temps_MD</name>
+            <attributes>
+                <parameter id="34">
+                    <name>Mois</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes/>
+                </parameter>
+                <parameter id="35">
+                    <name>Annee</name>
+                    <datatype>0</datatype>
+                    <type>parameter</type>
+                    <weakattributes/>
+                </parameter>
+            </attributes>
+            <hierarchies>
+                <hierarchy id="36">
+                    <name>H_t</name>
+                    <type>strict</type>
+                    <levels>
+                        <level id="37">
+                            <parameter_id>34</parameter_id>
+                            <levelPosition>1</levelPosition>
+                        </level>
+                        <level id="38">
+                            <parameter_id>35</parameter_id>
+                            <levelPosition>2</levelPosition>
+                            <link id="39">
+<name>H_t</name>
+<lower_param_id>34</lower_param_id>
+<upper_param_id>35</upper_param_id>
+<levelposition>2</levelposition>
+<type>strict</type>
+                            </link>
+                        </level>
+                    </levels>
+                </hierarchy>
+            </hierarchies>
+        </dimension>
+    </components>
+    <links>
+        <starlink id="81">
+            <name>Distribution_MD-Client_MD</name>
+            <fact_id>73</fact_id>
+            <dimension_id>75</dimension_id>
+        </starlink>
+        <starlink id="82">
+            <name>Distribution_MD-Publication_MD</name>
+            <fact_id>73</fact_id>
+            <dimension_id>76</dimension_id>
+        </starlink>
+        <starlink id="83">
+            <name>Distribution_MD-Temps_MD</name>
+            <fact_id>73</fact_id>
+            <dimension_id>77</dimension_id>
+        </starlink>
+        <starlink id="68">
+            <name>Distribution_MD-Temps_MD</name>
+            <fact_id>73</fact_id>
+            <dimension_id>77</dimension_id>
+        </starlink>
+        <starlink id="70">
+            <name>Distribution_MD-Client_MD</name>
+            <fact_id>73</fact_id>
+            <dimension_id>75</dimension_id>
+        </starlink>
+    </links>
+</schema>
